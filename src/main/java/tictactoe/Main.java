@@ -30,7 +30,7 @@ public class Main {
         }
     }
 
-    private static boolean isValidLevel(String level) {
+    static boolean isValidLevel(String level) {
         String[] validLevels = {"easy", "user", "medium", "hard"};
 
         for (String validLevel : validLevels) {
@@ -41,7 +41,7 @@ public class Main {
         return false;
     }
 
-    private static Player createPlayer(String level, String symbol) {
+    static Player createPlayer(String level, String symbol) {
         return switch (level) {
             case "easy" -> new Easy(symbol);
             case "medium" -> new Medium(symbol);
